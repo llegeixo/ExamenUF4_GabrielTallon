@@ -67,6 +67,7 @@ public class Player : MonoBehaviour
         if(_isGrounded && _playerGravity.y < 0)
         {
             _playerGravity.y = -2;
+            _animator.SetBool("IsJumping", false);
         }
         if(_isGrounded && Input.GetButtonDown("Jump"))
         {
